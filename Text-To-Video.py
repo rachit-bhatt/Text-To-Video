@@ -12,8 +12,7 @@ seed = 0
 #video_length = 24  #24 ÷ 4fps = 6 seconds
 video_length = FPS * SECONDS
 chunk_size = 8
-# prompt = "Emilia Clarke is tied up using various machines that tickle her. Her hands and legs are stretched wide. The machine includes various hands, fur, and vibrators to tickle her. She is wearing almost no clothes and is laughing hard while she is being tickled. A few vibrators are also tickling on her sensitive body parts."
-prompt = 'Emilia Clarke is being tickled by her four friends with her concent and she is enjoying the laugh.'
+prompt = 'GTA VI Trailer Intro.'
 
 # Generate the video chunk-by-chunk
 result = []
@@ -32,5 +31,5 @@ for i in range(len(chunk_ids)):
 
 # Concatenate chunks and save
 result = np.concatenate(result)
-result = [(r * 255).astype("uint8") for r in result]
+result = [(r * 255).astype("uint16") for r in result]
 imageio.mimsave("Output.mp4", result)
