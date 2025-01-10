@@ -33,4 +33,4 @@ for i in range(len(chunk_ids)):
 # Concatenate chunks and save
 result = np.concatenate(result)
 result = [(r * 255).astype("uint8") for r in result]
-imageio.mimsave("video.mp4", result)
+imageio.mimsave("Output.mp4", result)
